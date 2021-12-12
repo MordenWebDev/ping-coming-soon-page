@@ -1,0 +1,115 @@
+/* css rest */
+*{
+    box-sizing: border-box;
+}
+/* default body-style */
+body{
+    margin: 0%;
+    line-height: 1.5;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size:20px;
+    min-height: 100vh;
+}
+/* email input style */
+.emailimput{
+    border: 1px solid grey;
+    border-radius: 1000px;
+    font-size: inherit;
+    padding: 1rem 2rem;
+    outline: none;
+  
+}
+
+.emailimput:focus{
+    box-shadow: 0 0 4px grey;
+}
+/* button style */
+.btn{
+    font-size: inherit;
+    padding: 1rem 3rem;
+    background-color: hsl(223, 87%, 63%);
+    color: white;
+    box-shadow: 0 0 4px hsl(223, 87%, 63%); 
+    border-radius: 1000px;
+    border: none;
+    cursor: pointer;
+  
+}
+.btn:hover{
+    background-color: hsl(223, 100%, 88%);
+}
+/* header style */
+header{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  min-height: 400px;
+}
+
+span{
+color: hsl(0, 0%, 59%);
+font-weight: 300;
+}
+/* main style */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* dashboard image */
+.dashboard{
+    max-width: 600px;
+}
+/* social icons */
+.icons{
+    display: flex;
+    justify-content: center;
+}
+.icons a {
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+    border-radius: 50%;
+    color: hsl(223, 87%, 63%);
+}
+.icons a:hover{
+    color:white;
+    background-color: hsl(223, 87%, 63%);
+}
+/* for red text */
+.red{
+    color: hsl(354, 100%, 66%);
+    font-size: 1rem;
+    align-self: flex-start;
+    opacity: 0;
+    margin-top: .3rem;
+}
+
+/* media querry */
+/* media querry for screen lower than 500px*/
+@media only screen and (max-width: 500px) {
+    .myForm{
+        display:flex ;
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: wrap;
+
+    }
+    header{
+        text-align: center;
+    }
+    .btn{
+        display: block;
+        margin-top: 1rem;
+    }
+    section p{
+        text-align: center;
+    }
+    .dashboard{
+        max-width: 300px;
+    }
+
+  }

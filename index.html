@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  
+  <title>Frontend Mentor | Ping coming soon page</title>
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <img class="logo" src="images/logo.svg" alt="">
+<h1 class="title"><span>We are launching </span> soon!</h1>
+<p class="para"> Subscribe and get notified</p>
+<form name="myForm" action="">
+<input id="id2" name="fname"class="emailimput"type="email" placeholder="your email address">
+<submit onclick="validateForm()" class="btn"> Notify Me</submit>
+<p id="id1" class="red d"> please provide valid email address</p>
+</form>
+
+</header>
+ <main>
+   <img class="dashboard" src="images/illustration-dashboard.png" alt="">
+
+   <section>
+     <div class="icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-instagram"></i></a>
+     </div>
+    
+    <p> &copy; Copyright Ping. All rights reserved.</p>
+  </section>
+ </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/MordenWebDev">mordenwebdev</a>.
+    </p>
+  </footer>
+  <script>
+    // i know it is not best pratice to include js here but iam doing for learning  iam still learning css.
+  function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    document.getElementById('id1').style.opacity = 1;
+    document.getElementById('id2').style.borderColor ="hsl(354, 100%, 66%)";
+    return false;
+  }else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(x))
+  {
+    return (true)
+  }
+  document.getElementById('id1').style.opacity = 1;
+    document.getElementById('id2').style.borderColor ="red";
+    return (false)
+}
+
+  </script>
+</body>
+</html>
