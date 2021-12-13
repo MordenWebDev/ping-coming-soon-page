@@ -36,7 +36,7 @@ body{
   
 }
 .btn:hover{
-   background-color: hsl(223, 100%, 70%);
+    background-color: hsl(223, 100%, 70%);
 }
 /* header style */
 header{
@@ -47,6 +47,7 @@ header{
   justify-content: center;
   margin: 1rem;
   min-height: 400px;
+  margin-bottom: -1rem;
 }
 
 span{
@@ -63,22 +64,32 @@ main{
 /* dashboard image */
 .dashboard{
     max-width: 600px;
+    margin: 1rem;
+margin-top: .5rem;
 }
 /* social icons */
 .icons{
     display: flex;
     justify-content: center;
 }
-.icons a {
-    padding: 1rem 1.5rem;
+.icons a i {
+  font-size: 1em;
+  padding: 18px 22px;
     margin: 1rem;
     border-radius: 50%;
     color: hsl(223, 87%, 63%);
+    text-align: center;
+   
+ 
 }
-.icons a:hover{
+
+.icons a i:hover{
+    background-color: rgb(79, 125, 243);
     color:white;
-    background-color: hsl(223, 87%, 63%);
+    
+    
 }
+
 /* for red text */
 .red{
     color: hsl(354, 100%, 66%);
@@ -86,6 +97,20 @@ main{
     align-self: flex-start;
     opacity: 0;
     margin-top: .3rem;
+}
+.box{
+    display:flex ;
+    flex-direction: column;
+    margin-right: .5rem;
+}
+.copyright{
+    font-size: .8rem;
+}
+
+
+form{
+    display: flex;
+    align-items: flex-start;
 }
 
 /* media querry */
@@ -98,18 +123,33 @@ main{
         flex-wrap: wrap;
 
     }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0em;
+     }
     header{
         text-align: center;
+        margin: 1rem;
     }
     .btn{
         display: block;
-        margin-top: 1rem;
+        margin-top: 0;
+        width: 100%;
     }
     section p{
         text-align: center;
     }
     .dashboard{
         max-width: 300px;
+    }
+    .red{
+        margin-bottom: 0%;
+        text-align: center;
+    }
+    .copyright{
+        font-size: .8rem;
     }
 
   }
